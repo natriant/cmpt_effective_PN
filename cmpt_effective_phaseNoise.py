@@ -2,16 +2,20 @@ import numpy as np
 import pickle as pkl
 from my_functions import *
 
+
 # Machine and beam parameters
-betay = 73  # m in CC2, ~76 in CC1 (MAD-X)
-Vcc = 1e6  # V
-frev = 43.45e3  # Hz
-Eb = 270e9  # eV
-sigma_z = 0.138  # rms bunch length, m
-beta_0 = 0.999999  # cmpt it from the rest
+betay = 73.81671646 # 73 m at CC2, 76 m at CC1
+clight = 299792458 # m/s
+Vcc = 1e6 # V
+Eb = 270e9 # eV
+gamma_0 = 287.8
+beta_0 = np.sqrt(1 - 1/gamma_0**2)
+circumference = 6911.5623 # m
+frev = 299792458/circumference # Hz
+numBunches = 4
 gamma_0 = 287.7  # cmt it
-clight = 299792458  # light speed in meters/second
 f_RF = 400.789e6  # CC frequency in Hz
+
 
 # compute correction factor due to bunch length. Different fro each bunch according to the MD conditions
 
