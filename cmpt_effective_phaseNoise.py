@@ -22,6 +22,7 @@ f_RF = 400.789e6  # CC frequency in Hz
 sigma_phi = bunch_length_m_to_rad(sigma_z, clight, f_RF)  # rms bunch length in rad
 
 # Compute the expected growth rates from the measured AN and PN independently
+# Values obtained from: 2020/injected_noise_MD5_2018/plot_measured_spectrums.ipynb
 PSD_PN_list = [-122.75, -101.48, -115.22, -111.28, -111.03, -106.46, -101.48]  # dBc/Hz
 PSD_AN_list = [-128.15, -115.21, -124.06, -115.71, -116.92, -112.73, -106.99]
 
